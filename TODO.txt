@@ -1,0 +1,12 @@
+
+As I use this package, I think there are a few extra bits of functionality that
+would be nice.
+
+1. For prediction problems with Vecchia methods, it is sometimes nice to
+guarantee a certain number of conditioning points in the data. So for that, 
+there really should be a specialized routine that takes one collection of points
+and makes an immutable tree, and then just for the prediction points does the
+dynamic tree part. Even the dynamic tree is going to be much faster than
+the HNSW.jl routine, and maybe I should just write a NearestNeighbors.jl
+extension for the static tree part. But maybe that should just live here.
+
